@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+     <head>
+          <meta charset="UTF-8" />
+          <title>Formularz</title>
+     </head>
+     <body>
+		<!-- cokolwiek chcemy umiescic w formularzu musimy to umiescic pomiedzy znacznikiem form   // mowimy gdzie bedzie przeslany i jaka metodą-->
+		<form action="mailto:ik@wp.pl" method="post">
+			<!-- input - znacznik wstawiania pola  // typ pola // nazwa pola (tak jakby nazwa zmiennej?>  || Domyslnie wpisane Ewa // size - nie moze byc mniejsze niz 7 znakow pole -->
+			<fieldset>
+			<legend> <i><u><b>Dane podstawowe </b></u></i></legend>
+			Podaj imie: <input type="text" name="im" value="Ewa" size="7"> </br>
+			Podaj  2 imie: <input type="text" name="im2" value="Ania" size="7" readonly> </br>
+			<!-- disabled - nie mam mozliwosci ingerencji w to pole / max dlugosc-->
+			Podaj nazwisko: <input type="text" name="naz" value="Korczak" maxlenght="5" disabled> </br>
+			</br> </br> </br> </br> </br>
+			Podaj Login:	<input type="text" name="xd"> 		</br>
+			Podaj hasło:	<input type="password"	name="has"> </br>
+			</fieldset>
+			<!-- fieldset bierze w ramke-->
+			<fieldset>
+			<!-- nazwa nad ramka lul -->
+			<legend> <i>Przyciski wyboru </i> </legend>
+			<input type="submit" value="Zaloguj sie"> <!-- wysylanie -->
+			<input type="reset" value="wyczysc">   <!-- czyszczenie -->
+			</fieldset>
+			
+			Akceptuje regulamin 
+			<input type="checkbox" name="odp" value="t" checked>  <!-- checked- zazanczone insta--> </br>
+			Wybierz swoje zainteresowania: </br>
+			<input type="checkbox" name="zaint" value="muzyka">  Muzyka</br> 
+			<input type="checkbox" name="zaint" value="sport"> Sport</br>
+			<input type="checkbox" name="zaint" value="fotografia">	Fotografia </br>
+			
+			<!-- radio - zaznaczanie tylko 1 wyboru, taka sama nazwa aby mozna bylo wybrac tylko jedna wartosc -->
+			<h3>Wybierz płeć:</h3>
+			<input type="radio" name="plec" value="m"> Mężczyzna </br>
+			<input type="radio" name="plec" value="k"> Kobieta </br>
+			<h3>Wybierz język opcji</h3>
+			<!-- multiple,size  -->
+			<select name="jez" size="2">
+				<option value="a">Niemiecki</option>
+				<option value="b" selected>Cebulacki</option>
+				<option value="c">Anglikanski</option>
+				<option value="d">Hizpanski</option>
+				<option value="e">Brytyjski</option>
+			</select>
+			<fieldset>
+			<legend> <i>Przyciski wyboru </i> </legend>
+			<input type="submit" value="Gierczyca Zlosliwa CIe zaatakuje jak klikniesz"> <!-- wysylanie -->
+			<input type="reset" value="wyczysc">   <!-- czyszczenie -->
+			</fieldset>
+		</form>
+     </body>
+</html>
